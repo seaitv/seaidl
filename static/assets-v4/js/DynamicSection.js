@@ -2,6 +2,12 @@
 function addSectionBasedOnResolution() {
   // 获取屏幕宽度
   var screenWidth = window.innerWidth;
+  
+  // 检查是否已经存在相应的section
+  var existingSection = document.querySelector('.desktop, .mobile');
+  if (existingSection) {
+    existingSection.remove(); // 如果存在，则先删除
+  }
 
   // 创建一个新的section元素
   var section = document.createElement('section');
@@ -146,5 +152,13 @@ function addSectionBasedOnResolution() {
   document.body.appendChild(section);
 }
 
+
+
 // 调用函数来动态添加section和其中的HTML内容
 addSectionBasedOnResolution();
+
+// 监听窗口大小变化的事件
+window.addEventListener('resize', function() {
+  // 重新执行addSectionBasedOnResolution()函数
+  addSectionBasedOnResolution();
+});
