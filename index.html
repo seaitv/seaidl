@@ -16,120 +16,14 @@
             affCode: "",
             iosLink: "https://sen.nbutidy.cn/cdn/app/apk/seai.mobileconfig",
             androidLink: "https://sen.nbutidy.cn/cdn/app/apk/starapp.apk",
-            link1: "https://t.me/seaisp1", // 商务合作
-            web: "https://h5.seai.site/?cid=pagesdev", //H5网站地址
+            link1: "https://t.me/seaisp1",
+            web: "https://h5.seai.site/?cid=pagesdev",
         };
     </script>
 </style></head>
 <body>
 <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script type="text/javascript" src="./static/assets-v4/js/DynamicSection.js"></script>
-<!--script type="text/javascript" src="./static/assets-v4/js/jQuery.min.js"></script-->
-<script type="text/javascript">
-    const getDeviceInfo = () => {
-        const userAgent = navigator.userAgent.toLowerCase()
-        let isPc = Boolean(userAgent.match(/mobile|android|iphone/i)) === false
-        let isMobile = Boolean(userAgent.match(/mobile|android|iphone/i))
-        let isIos = Boolean(userAgent.match(/iphone|ipad/i))
-        let isAndroid = Boolean(userAgent.match(/android|mobile|pad/i) && Boolean(userAgent.match(/ipad/i)) === false && Boolean(userAgent.match(/mac/i)) === false)
-
-        if (screen.availWidth >= 1024 && isAndroid) {
-            isPc = true
-            isMobile = false
-            isAndroid = false
-        }
-
-        return { isPc, isMobile, isIos, isAndroid }
-    }
-    $(document).ready(function () {
-        if(getDeviceInfo().isIos){
-            $(".setup-tips-container").on('click', function () {
-                $('#ios-detail').fadeIn().css('display', 'flex');
-            })
-        }else {
-            $(".setup-tips-container").on('click', function () {
-                $('#platform-list').fadeIn().css('display', 'flex');
-            })
-        }
-
-        $('.platform-item').on('click', function () {
-            const imgSrc = $(this).data('src');
-            const imgSrc2 = $(this).data('src2');
-            const platformDetail = $('#platform-detail')
-            platformDetail.find('.modal-common-img').attr('src', imgSrc)
-            if (imgSrc2 !== "" || imgSrc2 !== undefined) {
-                platformDetail.find('.modal-common-img-2').attr('src', imgSrc2)
-            }
-            let src = platformDetail.find('.modal-common-img-2').attr('src')
-            if (src) {
-                platformDetail.find('.modal-common-img-2').show()
-            } else {
-                platformDetail.find('.modal-common-img-2').hide()
-            }
-            platformDetail.fadeIn().css('display', 'flex');
-        })
-
-        $('.android-modal-arrow').on('click', function () {
-            const type = $(this).data('type')
-            if (type === 1) {
-                $('#platform-list').fadeOut()
-            }
-            if (type === 2) {
-                $('#platform-detail').fadeOut()
-                const platformDetail = $('#platform-detail');
-                platformDetail.find('.modal-common-img').attr('src', '');
-                platformDetail.find('.modal-common-img-2').attr('src', '')
-            }
-            if (type === 3) {
-                $('#ios-detail').fadeOut();
-            }
-        })
-        
-    });
-
-    function downloadApp(type) {
-        if (type === undefined) {
-            if (getDeviceInfo().isIos) {
-                type = 'ios';
-            } else {
-                type = 'android';
-            }
-        }
-        if (type === 'ios') {
-            downapp_ios();
-        } else if (type === 'web') {
-            downapp_web();
-        } else {
-            downapp_android();
-        }
-    }
-
-    function downapp_ios() {
-        setTimeout(function () {
-            location.href = dataMap.iosLink;
-        }, 200);
-    }
-    function downapp_web() {
-        setTimeout(function () {
-            location.href = dataMap.web;
-        }, 200);
-    }
-    function downapp_android() {
-        setTimeout(function () {
-            location.href = dataMap.androidLink;
-        }, 200);
-    }
-
-    function onAddress(type) {
-        event.stopPropagation()
-        switch (type) {
-            case 'link1':
-                window.open(dataMap.link1, "_blank")
-                break;                     
-            default:
-        }
-    }
-</script>
 <section>
 <script type="text/javascript">var _Hasync= _Hasync|| [];
     _Hasync.push(['Histats.start', '1,4768514,4,0,0,0,00010000']);
