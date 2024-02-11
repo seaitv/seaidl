@@ -1,11 +1,13 @@
-<html lang="en"><head><script>Base64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",decode:function(input){var output="";var chr1,chr2,chr3;var enc1,enc2,enc3,enc4;var i=0;input=input.replace(/[^A-Za-z0-9\+\/\=]/g,"");while(i<input.length){enc1=this._keyStr.indexOf(input.charAt(i++));enc2=this._keyStr.indexOf(input.charAt(i++));enc3=this._keyStr.indexOf(input.charAt(i++));enc4=this._keyStr.indexOf(input.charAt(i++));chr1=(enc1<<2)|(enc2>>4);chr2=((enc2&15)<<4)|(enc3>>2);chr3=((enc3&3)<<6)|enc4;output=output+String.fromCharCode(chr1);if(enc3!=64){output=output+String.fromCharCode(chr2)}if(enc4!=64){output=output+String.fromCharCode(chr3)}}output=Base64._utf8_decode(output);return output},_utf8_decode:function(utftext){var string="";var i=0;var c=c1=c2=0;while(i<utftext.length){c=utftext.charCodeAt(i);if(c<128){string+=String.fromCharCode(c);i++}else if((c>191)&&(c<224)){c2=utftext.charCodeAt(i+1);string+=String.fromCharCode(((c&31)<<6)|(c2&63));i+=2}else{c2=utftext.charCodeAt(i+1);c3=utftext.charCodeAt(i+2);string+=String.fromCharCode(((c&15)<<12)|((c2&63)<<6)|(c3&63));i+=3}}return string}};</script>
-
+<!DOCTYPE html>
+<html>
+<head>
     <meta charset="UTF-8">
     <title>国产视频-播放器APP-色爱视频</title>
     <meta name="keywords" content="国产免费视频,在线视频app,福利小电影,不雅视频,宅男最爱,网黄,热点门事件">
     <meta name="description" content="色爱视频,本站提供最新国产免费电影,国产免费视频,分享热点门事件,宅男最爱二次元视频,视频app下载">
     <meta name="author" content="seai">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,minimum-scale=1, user-scalable=no">
+	<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://sen.nbutidy.cn https://cdn.bootcdn.net https://cdn.bootcss.com https://*.histats.com; style-src 'self' 'unsafe-inline' https://sen.nbutidy.cn https://cdn.bootcdn.net https://cdn.bootcss.com; connect-src 'self' https://sen.nbutidy.cn https://*.histats.com; img-src 'self' https://sen.nbutidy.cn https://cdn.bootcdn.net https://cdn.bootcss.com; media-src 'self' https://sen.nbutidy.cn blob:; worker-src 'self' https://sen.nbutidy.cn blob:;frame-src 'self' https://sen.nbutidy.cn blob:;child-src 'self' https://sen.nbutidy.cn blob:; ">
     <link rel="stylesheet" media="screen and (min-width: 750px)" href="./static/assets-v4/css/index.css">
     <link rel="stylesheet" media="screen and (max-width: 750px)" href="./static/assets-v4/css/mobile.css">
     <link rel="stylesheet" href="./static/assets-v4/mobile/androidModal.css">
@@ -15,12 +17,27 @@
             iosLink: "https://sen.nbutidy.cn/cdn/app/apk/seai.mobileconfig",
             androidLink: "https://sen.nbutidy.cn/cdn/app/apk/starapp.apk",
             link1: "https://t.me/seaisp1", // 商务合作
-            link2:"https://t.me/seaisp1", // 官方TG
-            link3: "",
             web: "https://h5.seai.site/?cid=pagesdev", //H5网站地址
         };
     </script>
-
+<script>
+    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (screenWidth >= 750) {
+        document.querySelector('.desktop').style.display = 'block';
+        document.querySelector('.mobile').style.display = 'none';
+        var mobileImages = document.querySelectorAll('.mobile img');
+        mobileImages.forEach(function(img) {
+            img.src = '';
+        });
+    } else {
+        document.querySelector('.desktop').style.display = 'none';
+        document.querySelector('.mobile').style.display = 'block';
+        var desktopImages = document.querySelectorAll('.desktop img');
+        desktopImages.forEach(function(img) {
+            img.src = '';
+        });
+    }
+</script>
 </style></head>
 <body>
 <section class="desktop">
@@ -39,9 +56,6 @@
                 <a class="nav-item" onclick="onAddress('link1')">
                     <div class="contact-us"><img src="./static/assets-v4/images/pc/img-4.png" alt=""></div>
                 </a>
-                <a class="nav-item" onclick="onAddress('link2')">
-                    <div class="contact-us"><img src="./static/assets-v4/images/pc/img-5.png" alt=""></div>
-                </a>
             </div>
         </div>      
         <div class="main">
@@ -52,7 +66,7 @@
                     </div>
                     <div class="info-activity">
                         <div class="qrcode">
-                            <div class="qr" title="https://seai.site"><!--canvas width="120" height="120"></canvas--><img src="./static/assets-v4/images/pc/dl-qr.png"></div>
+                            <div class="qr" title="https://h5.seai.site"><!--canvas width="120" height="120"></canvas--><img src="./static/assets-v4/images/pc/dl-qr.png"></div>
                         </div>
                         <div class="cont">
                             <img src="./static/assets-v4/images/pc/and.png" alt="" class="android-img" onclick="downloadApp('android')">
@@ -86,9 +100,6 @@
                     <div class="btnimg" onclick="onAddress('link1')">
                         <img class="icon-img" src="./static/assets-v4/images/mb/img-5.png">
                     </div>
-                    <!--div class="btnimg" onclick="onAddress('link2')">
-                        <img class="icon-img" src="./static/assets-v4/images/mb/img-6.png">
-                    </div-->
                 </div>
             </div>
             <div class="recommend">
@@ -153,10 +164,10 @@
     </div>
 </section>
 
-
-<script type="text/javascript" src="./static/assets-v4/js/jQuery.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<!--script type="text/javascript" src="./static/assets-v4/js/jQuery.min.js"></script-->
 <!--script src="./static/assets-v4/js/qrcode.min.js"></script-->
-<script type="text/javascript" src="./static/assets-v4/js/clipboard.min.js"></script>
+<!--script type="text/javascript" src="./static/assets-v4/js/clipboard.min.js"></script-->
 <script type="text/javascript">
     const getDeviceInfo = () => {
         const userAgent = navigator.userAgent.toLowerCase()
@@ -221,7 +232,6 @@
     });
 
     function downloadApp(type) {
-        //copyText(dataMap.copyText)
         if (type === undefined) {
             if (getDeviceInfo().isIos) {
                 type = 'ios';
@@ -249,15 +259,6 @@
         }, 200);
     }
     function downapp_android() {
-        $.ajax({
-            url: '/index.php/index/stat',
-            success: function () {
-                window.location.href = dataMap.androidLink
-            },
-            error: function () {
-                window.location.href = dataMap.androidLink
-            }
-        });
         setTimeout(function () {
             location.href = dataMap.androidLink;
         }, 200);
@@ -268,17 +269,38 @@
         switch (type) {
             case 'link1':
                 window.open(dataMap.link1, "_blank")
-                break;
-            case 'link2':
-                window.open(dataMap.link2, "_blank")
-                break;
-            case 'link3':
-                window.open(dataMap.link3, "_blank")
-                break;                       
+                break;                     
             default:
         }
     }
 
 </script>
 
-<noscript>error ..</noscript></body><div id="immersive-translate-popup" style="all: initial"></div></html>
+<noscript>error ..</noscript>
+<section>
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+    _Hasync.push(['Histats.start', '1,4768514,4,0,0,0,00010000']);
+    _Hasync.push(['Histats.fasi', '1']);
+    _Hasync.push(['Histats.track_hits', '']);
+    (function() {
+    var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+    hs.src = ('//s10.histats.com/js15_as.js');
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+    })();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4768514&101" alt="counter stats" border="0"></a></noscript>
+</section>
+<section>
+<!-- home -->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4835529,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4835529&101" alt="free webpage counters" border="0"></a></noscript>
+<!-- home  -->
+</section>
+</body></html>
