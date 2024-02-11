@@ -10,7 +10,6 @@
 	<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://sen.nbutidy.cn https://cdn.bootcdn.net https://cdn.bootcss.com https://*.histats.com; style-src 'self' 'unsafe-inline' https://sen.nbutidy.cn https://cdn.bootcdn.net https://cdn.bootcss.com; connect-src 'self' https://sen.nbutidy.cn https://*.histats.com; img-src 'self' https://sen.nbutidy.cn https://cdn.bootcdn.net https://cdn.bootcss.com; media-src 'self' https://sen.nbutidy.cn blob:; worker-src 'self' https://sen.nbutidy.cn blob:;frame-src 'self' https://sen.nbutidy.cn blob:;child-src 'self' https://sen.nbutidy.cn blob:; ">
     <link rel="stylesheet" media="screen and (min-width: 750px)" href="./static/assets-v4/css/index.css">
     <link rel="stylesheet" media="screen and (max-width: 750px)" href="./static/assets-v4/css/mobile.css">
-    <script type="text/javascript" src="./static/assets-v4/js/DynamicSection.js"></script>
     <link rel="stylesheet" href="./static/assets-v4/mobile/androidModal.css">
     <script>
         var dataMap = {
@@ -26,9 +25,8 @@
 
 
 <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script type="text/javascript" src="./static/assets-v4/js/DynamicSection.js"></script>
 <!--script type="text/javascript" src="./static/assets-v4/js/jQuery.min.js"></script-->
-<!--script src="./static/assets-v4/js/qrcode.min.js"></script-->
-<!--script type="text/javascript" src="./static/assets-v4/js/clipboard.min.js"></script-->
 <script type="text/javascript">
     const getDeviceInfo = () => {
         const userAgent = navigator.userAgent.toLowerCase()
@@ -38,7 +36,6 @@
         let isAndroid = Boolean(userAgent.match(/android|mobile|pad/i) && Boolean(userAgent.match(/ipad/i)) === false && Boolean(userAgent.match(/mac/i)) === false)
 
         if (screen.availWidth >= 1024 && isAndroid) {
-            //安卓平板 视为pc端
             isPc = true
             isMobile = false
             isAndroid = false
