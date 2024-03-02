@@ -25,7 +25,7 @@ function addSectionBasedOnResolution(){var s=window.innerWidth,i=document.queryS
      </div>
      <div class="info-activity">
       <div class="qrcode">
-       <div class="qr" title="https://seai.store"><!--canvas width="120" height="120"></canvas--><img src="./static/assets-v4/images/pc/dl-qr.png"></div>
+       <div class="qr" title="https://seai7.site"><!--canvas width="120" height="120"></canvas--><img src="./static/assets-v4/images/pc/dl-qr.png"></div>
       </div>
       <div class="cont">
        <img src="./static/assets-v4/images/pc/and.png" alt="" class="android-img" onclick="downloadApp('android')">
